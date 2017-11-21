@@ -1,0 +1,30 @@
+{
+  "name": "selection-popup",
+  "version": "1.0.1",
+  "description": "A library to add popup menus at text selections.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdembircan/selection-popup.git"
+  },
+  "keywords": [
+    "selection",
+    "popup",
+    "medium"
+  ],
+  "author": "Erdem Bircan <erdem.erdembircan@gmail.com> (https://erdembircan.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erdembircan/selection-popup/issues"
+  },
+  "homepage": "https://github.com/erdembircan/selection-popup#readme",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
