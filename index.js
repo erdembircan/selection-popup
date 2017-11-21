@@ -52,8 +52,22 @@ function _parseCss(main, newOne) {
 function _processSelection(e) {
   if (e.target.classList.contains('popupItem')) {
     actions[e.target.dataset.action](document.getSelection());
+    _hidePopup();
+    return;
   }
+  const parent = _parentNodeCheck(e.target, 'popupItem');
+  if (parent) actions[parent.dataset.action](document.getSelection());
   _hidePopup();
+}
+function _parentNodeCheck(node, className) {
+  const parent = node.parentNode;
+  if (!parent) return undefined;
+  if (parent.tagName !== 'BODY') {
+    if (parent.classList.contains(className)) return parent;
+    _parentNodeCheck(parent, className);
+  } else if (parent.tagName === 'BODY') {
+    return undefined;
+  }
 }
 
 function _hidePopup() {
