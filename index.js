@@ -2,6 +2,20 @@ const cssImp = require('./popupCss');
 
 let actions;
 
+/**
+ * @typedef _options - options
+ * @prop {string} [style = ''] - custom style
+ */
+const _options = {
+  style: '',
+};
+
+/**
+ * add popup menu to text selections
+ * @param {string} items - menu items
+ * @param {function} callbacks - click callbacks for items
+ * @param {_options} [options] - options 
+ */
 function selectionPopup(items, callbacks, options) {
   let css = cssImp.cssPopup + cssImp.elseCss;
   if (options && options.style) css = _parseCss(cssPopup, options.style) + elseCss;
