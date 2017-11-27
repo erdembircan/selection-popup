@@ -18,7 +18,7 @@ const _options = {
  */
 function selectionPopup(items, callbacks, options) {
   let css = cssImp.cssPopup + cssImp.elseCss;
-  if (options && options.style) css = _parseCss(cssPopup, options.style) + elseCss;
+  if (options && options.style) css = _parseCss(cssImp.cssPopup, options.style) + cssImp.elseCss;
 
   const head = document.head || document.getElementsByTagName('head')[0];
   const style = document.createElement('style');

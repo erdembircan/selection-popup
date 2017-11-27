@@ -1,6 +1,6 @@
 {
   "name": "selection-popup",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A library to add popup menus at text selections.",
   "main": "index.js",
   "engines": {
